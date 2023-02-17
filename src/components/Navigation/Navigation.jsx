@@ -1,19 +1,23 @@
-import { NavigationLink } from "./navigation.styled";
+import { NavigationLink, NavigWrapper, NavMenu } from './navigation.styled';
 
+import items from './items';
 
 const Navigation = () => {
+  const elements = items.map(({ id, to, text }) => {
     return (
-      <nav>
-        <ul>
-          <li>
-            <NavigationLink to={'/'}>Home</NavigationLink>
-          </li>
-          <li>
-            <NavigationLink to={'events'}>Events</NavigationLink>
-          </li>
-        </ul>
-      </nav>
+      <li key={id}>
+        <NavigationLink to={to}>{text}</NavigationLink>
+      </li>
     );
-}
+  });
+
+  return (
+    <header>
+      <NavigWrapper>
+        <NavMenu>{elements}</NavMenu>
+      </NavigWrapper>
+    </header>
+  );
+};
 
 export default Navigation;
