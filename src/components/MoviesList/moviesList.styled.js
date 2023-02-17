@@ -15,7 +15,7 @@ export const MoviesItem = styled.li`
   list-style: none;
 `;
 
-export const MoviesList = styled.ul`
+export const MoviesLists = styled.ul`
   display: flex;
   gap: 20px;
 `;

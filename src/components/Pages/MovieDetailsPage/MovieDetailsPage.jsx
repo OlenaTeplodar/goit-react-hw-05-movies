@@ -3,13 +3,12 @@ import {
   useParams,
   useLocation,
   useNavigate,
-  Link,
   Outlet,
 } from 'react-router-dom';
 
 import { getMoviesDetails } from 'services/moviesApi';
 
-import { IoArrowUndoSharp } from 'react-icons';
+import { FaArrowLeft } from 'react-icons/fa';
 import { ThreeCircles } from 'react-loader-spinner';
 
 import Error from '../../Error/Error';
@@ -55,7 +54,7 @@ const MoviesDetailsPage = () => {
   return (
     <main>
       <GoBack onClick={goBack}>
-        <IoArrowUndoSharp />
+        <FaArrowLeft />
         Go Back
       </GoBack>
       {movie && (
