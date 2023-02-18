@@ -22,7 +22,7 @@ import {
   MovieList,
   MovieTitle,
   WrapperCards,
-} from './movieDetailsPage.styled';
+} from '../MovieDetailsPage/movieDetailsPage.styled';
 
 const MoviesDetailsPage = () => {
   const [movie, setMovie] = useState(null);

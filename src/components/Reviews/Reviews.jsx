@@ -3,7 +3,13 @@ import { useParams } from 'react-router-dom';
 import { ThreeCircles } from 'react-loader-spinner';
 import { getMoviesReviews } from '../../services/moviesApi';
 import Error from 'components/Error/Error';
-import { ActorsMassage, ActorsItem, ActorsName, ActorsList } from 'components/Cast/cast.styled';
+
+import {
+  ReviewsMassage,
+  ReviewsName,
+  ReviewsList,
+  ReviewsItem,
+} from '../Reviews/reviews.styled';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -43,17 +49,17 @@ const Reviews = () => {
       />
       {error && <Error />}
       {reviews.length > 0 && (
-        <ActorsList>
+        <ReviewsList>
           {reviews.map(({ id, author, content }) => (
-            <ActorsItem key={id} >
-              <ActorsName>Author: {author}</ActorsName>
+            <ReviewsItem key={id} >
+              <ReviewsName>Author: {author}</ReviewsName>
               <p>{content}</p>
-            </ActorsItem>
+            </ReviewsItem>
           ))}
-        </ActorsList>
+        </ReviewsList>
       )}
       {reviews.length === 0 && !error && (
-        <ActorsMassage>We don't have any reviews for this movie</ActorsMassage>
+        <ReviewsMassage>We don't have any reviews for this movie</ReviewsMassage>
       )}
     </>
   );

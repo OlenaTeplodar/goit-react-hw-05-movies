@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ActorsList = styled.ul`
   margin-right: 32px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 16px;
   flex-wrap: wrap;
 `;
@@ -11,7 +11,7 @@ export const ActorsList = styled.ul`
 export const ActorsItem = styled.li`
   text-align: center;
   padding: 4px;
-  width: 120px;
+  width: 140px;
   list-style: none;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 `;

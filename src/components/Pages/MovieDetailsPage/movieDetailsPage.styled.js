@@ -2,25 +2,29 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const GoBack = styled.button`
-  margin-left: 32px;
-  margin-top: 8px;
-  padding: 4px;
-  font-weight: bold;
+  margin: 16px auto 16px 32px;
+  padding: 8px;
+  font-size: 16px;
   cursor: pointer;
   border: none;
   display: flex;
   align-items: center;
-  gap: 4px;
-
-  background-color: ${props => {
-    return props.isActive ? '#212121' : 'tomato';
-  }};
+  color: tomato;
+  background-color: #b0baf5;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+  &:hover,
+  &:focus {
+    background-color: #031992;
+    font-style: italic;
+  }
 `;
 
 export const MovieCard = styled.div`
   display: flex;
+  margin: 0 32px;
   gap: 30px;
-  padding-right: 12px;
+  padding: 0 12px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 `;
 
@@ -34,8 +38,9 @@ export const MovieLink = styled(Link)`
   color: #212121;
   font-size: 20px;
 
-  &.active {
+  &:focus, &:hover {
     color: tomato;
+    font-style: italic;
   }
 `;
 

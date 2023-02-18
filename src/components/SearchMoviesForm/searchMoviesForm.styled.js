@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FormStyle = styled.form`
   margin-top: 16px;
-  margin-left: 32px;
+  margin-left: 60px;
 `;
 
 export const LabelStyle = styled.label`
@@ -12,28 +12,33 @@ export const LabelStyle = styled.label`
 
 export const InputStyle = styled.input`
   padding: 8px;
-  width: 250px;
+  width: 260px;
   font-size: 16px;
 
   &:focus {
     outline: none;
-    border: 1px solid grey;
+    border: 1px dotted grey;
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.4);
   }
 `;
 
 export const ButtonStyle = styled.button`
   font-size: 16px;
-  height: 32px;
-  padding: 4px;
+  font-weight: 600;
+  height: 36px;
+  padding: 8px;
   cursor: pointer;
   border: none;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-
+  margin: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.4);
+  color: tomato;
+  background-color: #b0baf5;
   &:hover,
   &:focus {
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.4);
+    background-color: #031992;
+    font-style: italic;
   }
 `;

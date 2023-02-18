@@ -53,7 +53,7 @@ const Cast = () => {
       {error && <Error />}
       {actors.length > 0 && !error && (
         <ActorsList>
-          {actors.map(({ id, name, profile_path, character }) => {
+          {actors.map(({ id, name, profile_path, character }) => (
             <ActorsItem key={id}>
               <img
                 src={
@@ -67,8 +67,8 @@ const Cast = () => {
               />
               <ActorsName>{name}</ActorsName>
               <p>Character: {character}</p>
-            </ActorsItem>;
-          })}
+            </ActorsItem>
+          ))}
         </ActorsList>
       )}
       {actors.length === 0 && !error && (
