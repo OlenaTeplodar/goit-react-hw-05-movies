@@ -23,7 +23,7 @@ const Reviews = () => {
       try {
         setLoading(true);
         const result = await getMoviesReviews(Number(movieId));
-        console.log(result);
+
         setReviews(result);
       } catch (error) {
         setError(error.massage);
@@ -51,7 +51,7 @@ const Reviews = () => {
       {reviews.length > 0 && (
         <ReviewsList>
           {reviews.map(({ id, author, content }) => (
-            <ReviewsItem key={id} >
+            <ReviewsItem key={id}>
               <ReviewsName>Author: {author}</ReviewsName>
               <p>{content}</p>
             </ReviewsItem>
@@ -59,7 +59,9 @@ const Reviews = () => {
         </ReviewsList>
       )}
       {reviews.length === 0 && !error && (
-        <ReviewsMassage>We don't have any reviews for this movie</ReviewsMassage>
+        <ReviewsMassage>
+          We don't have any reviews for this movie
+        </ReviewsMassage>
       )}
     </>
   );
